@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>CALCULATOR</title>
+
+        <style>
+            
+            body
+            {
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translateX(-50%) translateY(-50%);
+                background:linear-gradient(to right,red,blue);
+               
+            }
+
+            .main
+            {
+               
+                height:100%;
+            }
+
+            .in
+            {border:1px solid black;
+             height: 50px;
+             width: 330px;
+             margin:0px;
+             padding:8px;
+             margin-bottom: 1px;
+             }
+
+             .btn
+             {
+                height:60px;
+                width: 80px;
+                border-style: none;
+                color:white;
+                background-color: #1e2838;
+                
+             }
+
+
+        </style>
+            
+        <script>
+            function add(x)
+            {
+                document.inp.textview.value=document.inp.textview.value+x;
+            }
+
+            function answer()
+            {
+                var an=document.inp.textview.value;
+                document.inp.textview.value=eval(an);
+            }
+
+            function back()
+            {
+             var y=document.inp.textview.value;
+             var l=y.length;
+
+             console.log(l);
+
+             document.inp.textview.value=y.substr(0,l-1);
+            }
+
+            function clean()
+            {
+                document.inp.textview.value="";
+            }
+
+        </script>
+    
+</head>
+
+<body>
+    <div class="main"></div>
+    <form name="inp">
+        <input type="text" name="textview" class="in">
+    </form>
+
+    <table>
+
+        <tr>
+                    <td><input class="btn" type="button" value="*" onclick="add('*')"></td>
+                    <td><input  class="btn" type="button" value="/" onclick="add('/')"></td>
+                    <td colspan="2"><input  class="btn" type="button" value="C" onclick="clean()" style="width:164px"></td>
+                
+        </tr>
+
+
+        <tr>
+            <td><input class="btn" type="button" value="1" onclick="add(1)"></td>
+            <td><input  class="btn" type="button" value="2" onclick="add(2)"></td>
+            <td><input  class="btn" type="button" value="3" onclick="add(3)"></td>
+            <td><input  class="btn" type="button" value="=" onclick="answer()"></td>
+        </tr>
+
+        <tr>
+            <td><input  class="btn" type="button" value="4" onclick="add(4)"></td>
+            <td><input  class="btn" type="button" value="5" onclick="add(5)"></td>
+            <td><input  class="btn" type="button" value="6" onclick="add(6)"></td>
+            <td><input  class="btn" type="button" value="-" onclick="add('-')"></td>
+        </tr>
+
+        <tr>
+                <td><input  class="btn" type="button" value="7" onclick="add(7)"></td>
+                <td><input  class="btn" type="button" value="8" onclick="add(8)"></td>
+                <td><input  class="btn" type="button" value="9" onclick="add(9)"></td>
+                <td rowspan="2"><input  class="btn" type="button" value="+" style="height:120px;" onclick="add('+')"></td>
+        </tr>
+
+        <tr>
+                <td><input  class="btn" type="button" value="<" onclick="back()"></td>
+                <td><input  class="btn" type="button" value="0" onclick="add(0)"></td>
+                <td><input  class="btn" type="button" value="."  onclick="add('.')"></td>
+
+        </tr>
+
+
+    </table>
+</body>
+ </html>
