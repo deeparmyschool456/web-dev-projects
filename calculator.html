@@ -10,7 +10,7 @@
                 top:50%;
                 left:50%;
                 transform:translateX(-50%) translateY(-50%);
-                background:linear-gradient(to right,red,blue);
+                background:linear-gradient(to right,blue,green);
                
             }
 
@@ -21,12 +21,12 @@
             }
 
             .in
-            {border:1px solid black;
+            {border:2px solid black;
              height: 50px;
              width: 330px;
              margin:0px;
-             padding:8px;
-             margin-bottom: 1px;
+             padding:16px;
+             margin-bottom: 2px;
              }
 
              .btn
@@ -34,7 +34,7 @@
                 height:60px;
                 width: 80px;
                 border-style: none;
-                color:white;
+                color:wheat;
                 background-color: #1e2838;
                 
              }
@@ -84,7 +84,7 @@
         <tr>
                     <td><input class="btn" type="button" value="*" onclick="add('*')"></td>
                     <td><input  class="btn" type="button" value="/" onclick="add('/')"></td>
-                    <td colspan="2"><input  class="btn" type="button" value="C" onclick="clean()" style="width:164px"></td>
+                    <td colspan="2"><input  class="btn" type="button" value="AC" onclick="clean()" style="width:164px"></td>
                 
         </tr>
 
@@ -111,7 +111,7 @@
         </tr>
 
         <tr>
-                <td><input  class="btn" type="button" value="<" onclick="back()"></td>
+                <td><input  class="btn" type="button" value="C" onclick="back()"></td>
                 <td><input  class="btn" type="button" value="0" onclick="add(0)"></td>
                 <td><input  class="btn" type="button" value="."  onclick="add('.')"></td>
 
